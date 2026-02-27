@@ -1,0 +1,121 @@
+/* === Variables de Composants Spécifiques === */
+
+:root {
+  --button-padding-y: var(--spacing-3);
+  --button-padding-x: var(--spacing-4);
+  --button-font-size: var(--font-size-base);
+  --button-font-weight: var(--font-weight-semibold);
+  --button-border-radius: var(--border-radius-md);
+  --button-transition: var(--transition-normal);
+  
+  /* Tailles de Bouton */
+  --button-padding-y-sm: var(--spacing-2);
+  --button-padding-x-sm: var(--spacing-3);
+  --button-padding-y-lg: var(--spacing-4);
+  --button-padding-x-lg: var(--spacing-6);
+  
+  /* Variantes de Bouton */
+  --button-bg-primary: var(--color-primary);
+  --button-bg-secondary: var(--color-text-primary);
+  --button-bg-tertiary: transparent;
+  --button-text-primary: var(--color-text-inverse);
+  --button-text-secondary: var(--color-text-primary);
+  --button-border-color: var(--color-border-primary);
+}
+
+:root {
+  --navbar-padding-y: var(--spacing-1);
+  --navbar-padding-x: var(--spacing-2);
+  --navbar-bg-color: var(--color-primary);
+  --navbar-border-color: var(--color-border-primary);
+  --navbar-logo-font-size: var(--font-size-2xl);
+  --navbar-logo-font-weight: var(--font-weight-black);
+  
+  /* Menu Burger */
+  --menu-btn-font-size: var(--font-size-xl);
+  --menu-btn-padding: var(--spacing-0);
+  --menu-bg-color: var(--color-bg-primary);
+  --menu-border-radius: var(--border-radius-lg);
+  --menu-shadow: var(--shadow-lg);
+  --menu-padding: var(--spacing-1);
+  --menu-gap: var(--spacing-0);
+}
+
+:root {
+  --hero-padding-y: var(--spacing-1);
+  --hero-padding-x: var(--spacing-2);
+  --hero-title-font-size: var(--font-size-2xl);
+  --hero-title-font-weight: var(--font-weight-bold);
+  --hero-text-font-size: var(--font-size-sm);
+  --hero-text-line-height: var(--line-height-relaxed);
+  --hero-title-margin-bottom: var(--spacing-0);
+  --hero-text-margin-bottom: var(--spacing-1);
+}
+
+:root {
+  --card-padding: var(--spacing-4) var(--spacing-3);
+  --card-border-radius: var(--border-radius-lg);
+  --card-min-height: 120px;
+  --card-title-font-size: var(--font-size-2xl);
+  --card-title-font-weight: var(--font-weight-bold);
+  --card-offer-font-size: var(--font-size-base);
+  --card-button-position: absolute;
+  --card-button-bottom: 0;
+  --card-button-right: 0;
+  --card-button-border-radius: 0 var(--border-radius-lg) 0 0;
+}
+
+:root {
+  --footer-padding-y: var(--spacing-3);
+  --footer-padding-x: var(--spacing-3);
+  --footer-bg-color: var(--color-primary);
+  --footer-text-font-size: var(--font-size-xs);
+  --footer-text-color: var(--color-text-muted);
+  --footer-social-icon-size: 24px;
+  --footer-social-icon-gap: var(--spacing-2);
+  --footer-social-icon-bg: var(--color-primary);
+  --footer-link-font-size: var(--font-size-xs);
+  --footer-link-color: var(--color-text-secondary);
+  --footer-link-border-color: var(--color-border-primary);
+  --footer-link-border-top: 1px solid var(--color-border-primary);
+  --footer-link-padding-top: var(--spacing-1);
+  --footer-link-margin: var(--spacing-1) var(--spacing-1) 0;
+}
+
+/* Composants Réactifs */
+@media (max-width: 768px) {
+  :root {
+    --navbar-padding-y: var(--spacing-3);
+    --navbar-logo-font-size: var(--font-size-2xl);
+    --hero-padding-y: var(--spacing-8);
+    --hero-title-font-size: var(--font-size-2xl);
+    --card-padding: var(--spacing-8) var(--spacing-5);
+    --card-title-font-size: var(--font-size-4xl);
+    --footer-padding-y: var(--spacing-8);
+    --footer-social-icon-size: 36px;
+    --footer-social-icon-gap: var(--spacing-4);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --navbar-padding-y: var(--spacing-3);
+    --navbar-logo-font-size: var(--font-size-xl);
+    --hero-padding-y: var(--spacing-6);
+    --hero-padding-x: var(--spacing-3);
+    --hero-title-font-size: var(--font-size-xl);
+    --hero-title-margin-bottom: var(--spacing-4);
+    --hero-text-font-size: var(--font-size-sm);
+    --hero-text-margin-bottom: var(--spacing-5);
+    --card-padding: var(--spacing-6) var(--spacing-4);
+    --card-title-font-size: var(--font-size-3xl);
+    --card-min-height: 180px;
+    --footer-padding-y: var(--spacing-6);
+    --footer-padding-x: var(--spacing-3);
+    --footer-text-font-size: var(--font-size-xs);
+    --footer-social-icon-size: 32px;
+    --footer-social-icon-gap: var(--spacing-3);
+    --footer-link-font-size: var(--font-size-sm);
+    --footer-link-margin: var(--spacing-2) 0;
+  }
+}

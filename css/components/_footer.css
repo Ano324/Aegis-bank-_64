@@ -1,0 +1,102 @@
+/* === Composant Pied de Page === */
+
+.footer {
+    padding: var(--footer-padding-y) 0;
+    text-align: center;
+    background-color: var(--footer-bg-color);
+    flex-shrink: 0;
+    margin: 0;
+    height: auto;
+    min-height: 80px;
+}
+
+/* Conteneur des icônes de réseaux sociaux */
+.footer__social-icons {
+    display: flex;
+    justify-content: center;
+    gap: clamp(5px, 2vw, 15px);
+    margin-bottom: clamp(2px, 1vw, 5px);
+}
+
+/* Icône de réseau social individuelle */
+.footer__social-icon {
+    display: inline-flex;
+    width: var(--footer-social-icon-size);
+    height: var(--footer-social-icon-size);
+    align-items: center;
+    justify-content: center;
+    background-color: var(--footer-social-icon-bg);
+    border: 1px solid var(--footer-link-border-color);
+    border-radius: var(--border-radius-full);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    @include transition();
+}
+
+/* État de survol des icônes de réseaux sociaux */
+.footer__social-icon:hover { 
+    background-color: var(--color-text-primary); 
+    color: var(--color-text-inverse);
+}
+
+/* Icône SVG à l'intérieur des icônes de réseaux sociaux */
+.footer__social-icon svg { 
+    width: 20px; 
+    height: 20px;
+}
+
+/* Texte du footer (copyright, etc.) */
+.footer__text {
+    font-size: var(--footer-text-font-size);
+    color: var(--footer-text-color);
+    margin-bottom: 0;
+}
+
+/* Liens du footer — mentions légales et confidentialité */
+.footer__confidentiality,
+.footer__legal {
+    display: inline-block;
+    margin: var(--footer-link-margin);
+    color: var(--footer-link-color);
+    font-size: var(--footer-link-font-size);
+    text-decoration: none;
+    padding-top: var(--footer-link-padding-top);
+    border-top: var(--footer-link-border-top);
+}
+
+/* === Variantes du footer === */
+
+.footer--dark {
+    background-color: var(--color-text-primary);
+    color: var(--color-text-inverse);
+}
+
+.footer--dark .footer__social-icon {
+    background-color: var(--color-text-inverse);
+    color: var(--color-text-primary);
+    border-color: var(--color-text-primary);
+}
+
+.footer--dark .footer__social-icon:hover {
+    background-color: var(--color-text-primary);
+    color: var(--color-text-inverse);
+}
+
+.footer--dark .footer__link-color {
+    color: var(--color-text-inverse);
+}
+
+/* Footer Layout */
+.footer__content {
+    @include container();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-4);
+}
+
+.footer__bottom {
+    border-top: 1px solid var(--color-border-primary);
+    padding-top: var(--spacing-4);
+    margin-top: var(--spacing-4);
+}

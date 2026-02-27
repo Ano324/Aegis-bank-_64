@@ -1,0 +1,136 @@
+/* === Mixins CSS === */
+
+/* === Mixins Flexbox === */
+/* Mixin flexible pour les dispositions flexbox */
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+/* Mixin pour centrer les éléments horizontalement et verticalement */
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mixin pour distribuer l'espace entre les éléments */
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* === Mixins de Positionnement === */
+
+/* Mixin pour le positionnement absolu */
+@mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+/* Mixin pour le positionnement fixe */
+@mixin fixed($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+/* === Mixins de Typographie === */
+
+/* Mixin pour tronquer le texte avec ellipse */
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Mixin pour la typographie responsive */
+@mixin text-responsive($font-size-base, $font-size-mobile) {
+  font-size: $font-size-base;
+  @media (max-width: 480px) {
+    font-size: $font-size-mobile;
+  }
+}
+
+/* === Mixins d'Animation === */
+
+/* Mixin pour les transitions CSS */
+@mixin transition($properties: all, $duration: var(--transition-normal), $timing: ease) {
+  transition: $properties $duration $timing;
+}
+
+/* Mixin pour un effet de survol élémenté */
+@mixin hover-effect {
+  @include transition();
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+/* === Mixins Responsive === */
+
+/* Mixin pour les styles mobiles */
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+/* Mixin pour les styles tablettes */
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+/* Mixin pour les styles desktop */
+@mixin desktop {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+/* === Mixin Container === */
+
+/* Mixin pour les conteneurs centrés */
+@mixin container($max-width: var(--container-max-width), $padding: var(--container-padding)) {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $padding;
+}
+
+/* === Mixins de Boutons === */
+
+/* Mixin de base pour tous les boutons */
+@mixin button-base {
+  display: inline-block;
+  padding: var(--button-padding-y) var(--button-padding-x);
+  border-radius: var(--button-border-radius);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  @include transition();
+}
+
+/* Mixin pour les variantes de boutons */
+@mixin button-variant($bg-color, $text-color, $border-color: transparent) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 1px solid $border-color;
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}

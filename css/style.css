@@ -1,0 +1,56 @@
+/* === Fichier CSS principal - AEGIS BANK === */
+
+/* Import des variables et utilitaires */
+@import './vars/index.css';
+@import './utils/_mixins.css';
+@import './utils/_helpers.css';
+
+/* Import des composants */
+@import './components/_navbar.css';
+@import './components/_hero.css';
+@import './components/_card.css';
+@import './components/_button.css';
+@import './components/_footer.css';
+
+/* === Styles de base : typographie & mise en page === */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-family: var(--font-family-primary);
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+}
+
+/* === Animation du logo === */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.navbar__logo {
+    animation: blink 2s infinite;
+}
+
+/* === Layout principal === */
+main { 
+    @include container();
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 120px);
+    padding: 0 var(--container-padding);
+}

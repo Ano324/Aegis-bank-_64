@@ -1,0 +1,77 @@
+/* === Composant Carte === */
+
+.card { 
+    background: linear-gradient(135deg, var(--gradient-primary-start) 0%, var(--gradient-primary-end) 100%);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    margin-bottom: var(--spacing-2);
+    position: relative;
+    min-height: var(--card-min-height);
+}
+
+/* Conteneur flexible pour le contenu de la carte */
+.card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Titre principal de la carte */
+.card__title {
+    font-size: var(--card-title-font-size);
+    font-weight: var(--card-title-font-weight);
+    color: rgb(9, 6, 6);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--spacing-3);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+/* Texte d'offre promotionnelle */
+.card__offer {
+    font-size: var(--card-offer-font-size);
+    color: rgb(9, 6, 6);
+    font-weight: var(--font-weight-regular);
+    margin-bottom: 0;
+}
+
+/* Bouton de téléchargement positionné dans le coin inférieur droit */
+.card .button--download {
+    position: absolute;
+    bottom: var(--card-button-bottom);
+    right: var(--card-button-right);
+    border-radius: var(--card-button-border-radius);
+    background-color: var(--color-text-inverse);
+    color: var(--color-text-primary);
+    padding: var(--button-padding-y) var(--button-padding-x);
+    font-size: var(--font-size-sm);
+}
+
+/* === Variantes de carte === */
+
+.card--elevated {
+    box-shadow: var(--shadow-lg);
+}
+
+/* Variante de carte avec bordure */
+.card--outlined {
+    border: 1px solid var(--color-border-primary);
+}
+
+/* Variante de carte sans padding */
+.card--lush {
+    padding: 0;
+}
+
+/* === Tailles de carte === */
+
+/* Variante de carte petite */
+.card--sm {
+    padding: var(--spacing-4) var(--spacing-3);
+    min-height: 160px;
+}
+
+/* Variante de carte grande */
+.card--lg {
+    padding: var(--spacing-12) var(--spacing-6);
+    min-height: 240px;
+}

@@ -1,0 +1,71 @@
+/* === Composant Boutons === */
+
+.button {
+    @include button-base;
+    @include button-variant(var(--button-bg-primary), var(--button-text-primary));
+}
+
+/* === Variantes de boutons === */
+
+/* Bouton primaire */
+.button--primary {
+    @include button-variant(var(--button-bg-primary), var(--button-text-primary));
+}
+
+/* Bouton secondaire */
+.button--secondary {
+    @include button-variant(var(--button-bg-secondary), var(--button-text-secondary));
+}
+
+/* Bouton tertiaire */
+.button--tertiary {
+    @include button-variant(var(--button-bg-tertiary), var(--button-text-primary), var(--button-border-color));
+}
+
+/* === Tailles de boutons === */
+
+/* Bouton petit */
+.button--sm {
+    padding: var(--button-padding-y-sm) var(--button-padding-x-sm);
+    font-size: var(--font-size-sm);
+}
+
+/* Bouton grand */
+.button--lg {
+    padding: var(--button-padding-y-lg) var(--button-padding-x-lg);
+    font-size: var(--font-size-lg);
+}
+
+/* === Styles spécifiques === */
+
+/* Bouton de téléchargement */
+.button--download {
+    padding: var(--button-padding-y-lg) var(--button-padding-x-lg);
+}
+
+/* === États des boutons === */
+
+/* État de survol */
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* État actif */
+.button:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+/* État de focus */
+.button:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+/* État désactivé */
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}

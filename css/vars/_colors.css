@@ -1,0 +1,48 @@
+/* === Variables de Couleurs === */
+
+:root {
+  /* Couleurs de Marque */
+  --color-primary: #eb7b7b;
+  --color-primary-dark: #d66666;
+  --color-primary-light: #f09090;
+  
+  /* Couleurs de Texte */
+  --color-text-primary: #000000;
+  --color-text-secondary: #333333;
+  --color-text-muted: #666666;
+  --color-text-inverse: #ffffff;
+  
+  /* Couleurs d'Arrière-plan */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8f8f8;
+  --color-bg-tertiary: #f0f0f0;
+  
+  /* Couleurs de Bordure */
+  --color-border-primary: #e0e0e0;
+  --color-border-secondary: #d0d0d0;
+  --color-border-tertiary: #cccccc;
+  
+  /* Couleurs d'Ombre */
+  --color-shadow-primary: rgba(0, 0, 0, 0.1);
+  --color-shadow-secondary: rgba(0, 0, 0, 0.15);
+  --color-shadow-tertiary: rgba(0, 0, 0, 0.2);
+  
+  /* Couleurs de Dégradé */
+  --gradient-primary-start: #ec9f9f;
+  --gradient-primary-end: #f35353;
+  
+  /* Couleurs Interactives */
+  --color-hover: #d66666;
+  --color-focus: #b35353;
+  --color-disabled: #cccccc;
+}
+
+/* Variables du mode sombre */
+[data-theme="dark"] {
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e0e0e0;
+  --color-text-muted: #b0b0b0;
+  --color-bg-primary: #1a1a1a;
+  --color-bg-secondary: #2d2d2d;
+  --color-bg-tertiary: #404040;
+}

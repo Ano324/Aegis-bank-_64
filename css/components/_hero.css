@@ -1,0 +1,35 @@
+/* === Composant Héro === */
+
+.hero {
+    padding: var(--hero-padding-y) 0;
+    text-align: left;
+    margin-bottom: var(--spacing-1);
+}
+
+/* Titre principal de la section héro */
+.hero__title {
+    font-size: var(--hero-title-font-size);
+    font-weight: var(--hero-title-font-weight);
+    line-height: var(--line-height-snug);
+    margin-bottom: var(--hero-title-margin-bottom);
+}
+
+/* Texte descriptif de la section héro */
+.hero__text {
+    font-size: var(--hero-text-font-size);
+    line-height: var(--hero-text-line-height);
+    margin-bottom: var(--hero-text-margin-bottom);
+    color: var(--color-text-secondary);
+}
+
+/* Texte en gras dans le texte héro */
+.hero__text strong {
+    font-weight: var(--font-weight-bold);
+}
+
+/* Conteneur des boutons d'action dans la section héro */
+.hero__buttons {
+    display: flex;
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-8);
+}
